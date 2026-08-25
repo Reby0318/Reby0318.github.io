@@ -30,20 +30,20 @@ python3 -m http.server 8000
 ## Publish it free (GitHub Pages) — about 10 minutes
 
 1. Create a repository at https://github.com/new
-   - **Name it `YOUR_USERNAME.github.io`** — using your exact GitHub username. That special
-     name gives you the clean URL `https://YOUR_USERNAME.github.io` with no folder suffix,
+   - **Name it `Reby0318.github.io`** — using your exact GitHub username. That special
+     name gives you the clean URL `https://Reby0318.github.io` with no folder suffix,
      which looks far better on a résumé.
    - Set it to **Public**, and do not add a README.
 2. Push this folder:
    ```bash
    cd ~/Projects/rebecca-wu-portfolio
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git
+   git remote add origin https://github.com/Reby0318/Reby0318.github.io.git
    git branch -M main
    git push -u origin main
    ```
 3. Go to **Settings → Pages**, set **Source** to `Deploy from a branch`,
    **Branch** to `main` and folder to `/ (root)`, then **Save**.
-4. Wait 1–2 minutes. Your site is live at **`https://YOUR_USERNAME.github.io`**.
+4. Wait 1–2 minutes. Your site is live at **`https://Reby0318.github.io`**.
 
 To update it later: edit `index.html`, then
 ```bash
