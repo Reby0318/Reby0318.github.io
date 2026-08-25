@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rebecca Wu — Music · Business · Data</title>
+<meta name="description" content="Classically trained musician and MBA candidate working at the intersection of music, business strategy and data analytics.">
+<meta property="og:title" content="Rebecca Wu — Music · Business · Data">
+<meta property="og:description" content="Classically trained musician and MBA candidate working at the intersection of music, business strategy and data analytics.">
+<meta property="og:type" content="website">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#faf9f6; --panel:#ffffff; --panel-2:#f2f0ea;
+  --line:#e2ded2; --line-2:#cfcabb;
+  --ink:#14130f; --ink-2:#54514a; --ink-3:#837f74;
+  --accent:#7a5c2e; --accent-soft:#f0e6d4;
+  --ok:#1baf7a;
+  --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#12110f; --panel:#1a1917; --panel-2:#232120;
+    --line:#332f2a; --line-2:#4a453e;
+    --ink:#f7f5ef; --ink-2:#c2bcae; --ink-3:#948d7f;
+    --accent:#d0a961; --accent-soft:#2a2419;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#12110f; --panel:#1a1917; --panel-2:#232120;
+  --line:#332f2a; --line-2:#4a453e;
+  --ink:#f7f5ef; --ink-2:#c2bcae; --ink-3:#948d7f;
+  --accent:#d0a961; --accent-soft:#2a2419;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
+  font-size:17px; line-height:1.68; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:940px; margin:0 auto; padding:0 28px}
+a{color:var(--ink); text-decoration:none}
+p{margin:0 0 18px; max-width:70ch}
+
+/* ---------- nav ---------- */
+.topbar{position:sticky; top:0; z-index:20; background:color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter:saturate(1.6) blur(10px); border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex; align-items:center; justify-content:space-between; height:58px; gap:20px}
+.mark{font-family:var(--serif); font-size:19px; letter-spacing:-.01em; font-weight:600}
+.topbar nav{display:flex; gap:24px; font-size:14.5px}
+.topbar nav a{color:var(--ink-2)}
+.topbar nav a:hover{color:var(--accent)}
+@media(max-width:700px){ .topbar nav{display:none} }
+
+/* ---------- hero ---------- */
+.hero{padding:86px 0 68px}
+.kicker{font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent);
+        font-weight:650; margin-bottom:22px}
+h1{font-family:var(--serif); font-size:clamp(42px,7vw,68px); line-height:1.04;
+   letter-spacing:-.025em; margin:0 0 22px; font-weight:600}
+.tagline{font-size:21px; line-height:1.55; color:var(--ink-2); max-width:60ch; margin:0 0 34px}
+.tagline strong{color:var(--ink); font-weight:600}
+.actions{display:flex; gap:11px; flex-wrap:wrap; margin-bottom:44px}
+.btn{display:inline-flex; align-items:center; gap:8px; padding:11px 19px; border-radius:999px;
+     border:1px solid var(--line-2); font-size:14.5px; font-weight:550; color:var(--ink);
+     transition:all .15s}
+.btn:hover{border-color:var(--accent); color:var(--accent)}
+.btn.solid{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+.btn.solid:hover{opacity:.86; color:var(--bg)}
+.pillars{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1px;
+         background:var(--line); border:1px solid var(--line); border-radius:12px; overflow:hidden}
+.pillar{background:var(--panel); padding:22px 22px 24px}
+.pillar .t{font-family:var(--serif); font-size:19px; margin-bottom:7px}
+.pillar .d{font-size:14.5px; color:var(--ink-2); line-height:1.55}
+
+/* ---------- sections ---------- */
+section{padding:66px 0; border-top:1px solid var(--line)}
+.shead{display:flex; align-items:baseline; gap:16px; margin-bottom:10px}
+.snum{font-family:var(--serif); font-size:15px; color:var(--accent); font-variant-numeric:tabular-nums}
+h2{font-family:var(--serif); font-size:clamp(28px,4vw,38px); letter-spacing:-.02em;
+   margin:0; font-weight:600; line-height:1.15}
+.slede{color:var(--ink-2); font-size:18px; margin:14px 0 36px; max-width:66ch}
+h3{font-size:17px; font-weight:640; margin:0 0 10px; letter-spacing:-.005em}
+
+/* ---------- work ---------- */
+.work{display:flex; flex-direction:column; gap:20px}
+.card{background:var(--panel); border:1px solid var(--line); border-radius:14px;
+      padding:28px; transition:border-color .15s}
+.card:hover{border-color:var(--line-2)}
+.card .row{display:flex; align-items:flex-start; justify-content:space-between; gap:18px;
+           flex-wrap:wrap; margin-bottom:6px}
+.card h3{font-family:var(--serif); font-size:24px; font-weight:600; letter-spacing:-.015em; margin:0}
+.badge{font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; font-weight:650;
+       padding:5px 11px; border-radius:999px; white-space:nowrap}
+.badge.live{background:var(--accent-soft); color:var(--accent)}
+.badge.plan{background:var(--panel-2); color:var(--ink-3); border:1px solid var(--line)}
+.card .sub{color:var(--ink-2); font-size:15px; margin:2px 0 16px}
+.card p{font-size:15.5px; color:var(--ink-2); margin-bottom:18px; max-width:none}
+.card p strong{color:var(--ink)}
+.metrics{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:1px;
+         background:var(--line); border:1px solid var(--line); border-radius:10px;
+         overflow:hidden; margin:0 0 20px}
+.metric{background:var(--panel-2); padding:15px 16px}
+.metric .v{font-size:23px; font-weight:660; letter-spacing:-.025em; font-variant-numeric:tabular-nums;
+           line-height:1.15}
+.metric .k{font-size:12.5px; color:var(--ink-3); margin-top:5px; line-height:1.4}
+.tags{display:flex; gap:7px; flex-wrap:wrap; margin-bottom:18px}
+.tag{font-size:12.5px; padding:4px 11px; border-radius:999px; background:var(--panel-2);
+     color:var(--ink-2); border:1px solid var(--line)}
+.links{display:flex; gap:18px; flex-wrap:wrap; font-size:14.5px; font-weight:550}
+.links a{color:var(--accent); border-bottom:1px solid transparent}
+.links a:hover{border-bottom-color:currentColor}
+
+/* ---------- expertise ---------- */
+.grid3{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px}
+.ex{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:26px}
+.ex h3{font-family:var(--serif); font-size:20px; font-weight:600; margin-bottom:12px}
+.ex ul{margin:0; padding-left:19px}
+.ex li{font-size:15px; color:var(--ink-2); margin-bottom:8px; line-height:1.55}
+.ex li::marker{color:var(--accent)}
+
+/* ---------- background ---------- */
+.entry{display:grid; grid-template-columns:170px 1fr; gap:26px; padding:24px 0;
+       border-bottom:1px solid var(--line)}
+.entry:last-child{border-bottom:none}
+.entry .when{font-size:14px; color:var(--ink-3); font-variant-numeric:tabular-nums; padding-top:3px}
+.entry .what h3{margin-bottom:3px}
+.entry .where{font-size:15px; color:var(--ink-2); margin-bottom:10px}
+.entry .what p{font-size:15px; color:var(--ink-2); margin:0}
+.entry .what ul{margin:8px 0 0; padding-left:19px}
+.entry .what li{font-size:15px; color:var(--ink-2); margin-bottom:6px}
+@media(max-width:660px){ .entry{grid-template-columns:1fr; gap:6px} }
+
+/* ---------- skills ---------- */
+.skills{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:26px}
+.skill h3{font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3);
+          font-weight:650; margin-bottom:14px}
+.skill ul{list-style:none; margin:0; padding:0}
+.skill li{font-size:15px; padding:7px 0; border-bottom:1px solid var(--line);
+          display:flex; justify-content:space-between; gap:14px; color:var(--ink-2)}
+.skill li:last-child{border-bottom:none}
+.skill li b{font-weight:550; color:var(--ink)}
+.lvl{font-size:12.5px; color:var(--ink-3); white-space:nowrap}
+
+/* ---------- contact ---------- */
+.contact{background:var(--panel); border:1px solid var(--line); border-radius:14px;
+         padding:36px; text-align:center}
+.contact h2{margin-bottom:12px}
+.contact p{margin:0 auto 24px; color:var(--ink-2); max-width:52ch}
+
+footer{padding:40px 0 60px; font-size:13.5px; color:var(--ink-3); text-align:center}
+.note{background:var(--accent-soft); border:1px dashed var(--accent); border-radius:10px;
+      padding:14px 18px; font-size:14px; color:var(--ink-2); margin:20px 0}
+.note b{color:var(--accent)}
+@media(max-width:640px){ body{font-size:16px} section{padding:52px 0} .card{padding:22px} }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span class="mark">Rebecca Wu</span>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#background">Background</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div></div>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="kicker">Music · Business · Data</div>
+    <h1>I turn what audiences<br>actually do into decisions<br>the music business can act on.</h1>
+    <p class="tagline">Classically trained musician, <strong>Master of Music</strong>, and
+      <strong>MBA candidate</strong>. I work where the three fields meet — using data to answer
+      the commercial questions the music industry is currently guessing at.</p>
+    <div class="actions">
+      <a class="btn solid" href="#work">See my work</a>
+      <a class="btn" href="mailto:YOUR_EMAIL">Email</a>
+      <a class="btn" href="YOUR_LINKEDIN_URL">LinkedIn</a>
+      <a class="btn" href="YOUR_GITHUB_URL">GitHub</a>
+      <a class="btn" href="assets/Rebecca-Wu-Resume.pdf">Résumé</a>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><div class="t">Music</div>
+        <div class="d">Conservatory-trained performer with working knowledge of how the
+          industry is actually structured — repertoire, rights, live operations, artist development.</div></div>
+      <div class="pillar"><div class="t">Business</div>
+        <div class="d">MBA coursework in strategy, finance and operations, applied to the
+          commercial problems streaming and AI have created.</div></div>
+      <div class="pillar"><div class="t">Data</div>
+        <div class="d">Advanced Excel, Tableau and Python for cleaning, modelling and
+          communicating findings that non-technical decision-makers can use.</div></div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="shead"><span class="snum">01</span><h2>The through-line</h2></div>
+    <p>Most people in the music industry are strong in one of three areas: they understand
+      the music, they understand the business, or they understand the data. Decisions get made
+      at the seams between them — and that is where the value leaks out.</p>
+    <p>My background sits across all three. Years of conservatory training taught me how music
+      is actually made and what it costs an artist to make it. An MBA is teaching me how the
+      companies around that artist make money. And analytics is how I turn the two into evidence
+      instead of opinion.</p>
+    <p>Practically, that means I am the person who can look at a chart dataset, spot that the
+      metric everyone relies on has stopped working, explain why in commercial terms, and then
+      build the dashboard that lets a team act on it — without needing three people to translate
+      between each step.</p>
+  </section>
+
+  <section id="work">
+    <div class="shead"><span class="snum">02</span><h2>Selected work</h2></div>
+    <p class="slede">Each project takes a real, current problem the music industry is facing,
+      answers it with public data, and ships something a decision-maker can use.</p>
+
+    <div class="work">
+
+      <article class="card">
+        <div class="row">
+          <h3>Signal vs. Noise</h3>
+          <span class="badge live">Published</span>
+        </div>
+        <p class="sub">Quantifying the discovery bottleneck in the streaming era</p>
+        <p>The music industry's binding constraint has flipped from supply to verification:
+          106,000 tracks now arrive daily, more than half of Deezer's uploads are AI-generated,
+          and streaming fraud drains roughly $2bn a year. Nobody can cheaply tell durable demand
+          from manufactured attention.</p>
+        <p>I analysed <strong>68 years of Billboard Hot 100 data — 355,087 song-weeks</strong> —
+          to measure how far the industry's demand signal has degraded, then tested which early
+          metric actually predicts a hit's commercial life. The answer overturns standard practice:
+          <strong>debut chart position is close to noise, while week-eight retention predicts
+          durability 3.5× better</strong> — early enough to reallocate marketing spend.</p>
+        <div class="metrics">
+          <div class="metric"><div class="v">72.7%</div><div class="k">of 2024 hits peaked in week one — up from 0.6% in 2000</div></div>
+          <div class="metric"><div class="v">20 → 7</div><div class="k">weeks: collapse in a hit's median chart life</div></div>
+          <div class="metric"><div class="v">2.8×</div><div class="k">separation in durability from the metric I propose</div></div>
+          <div class="metric"><div class="v">355k</div><div class="k">song-weeks cleaned and analysed</div></div>
+        </div>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">Tableau</span><span class="tag">Excel</span>
+          <span class="tag">Market analysis</span><span class="tag">Data cleaning</span>
+          <span class="tag">Strategy recommendation</span>
+        </div>
+        <div class="links">
+          <a href="PROJECT_SITE_URL">Project site →</a>
+          <a href="PROJECT_PAPER_URL">Full paper →</a>
+          <a href="PROJECT_TABLEAU_URL">Dashboards →</a>
+          <a href="PROJECT_REPO_URL">Code &amp; data →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="row">
+          <h3>Global Repertoire Shift</h3>
+          <span class="badge plan">In progress</span>
+        </div>
+        <p class="sub">Where local music is winning, and what that means for catalog strategy</p>
+        <p>Latin America grew 17.1% in 2025, MENA and Sub-Saharan Africa 15.2% each — the
+          industry's growth has moved decisively outside its traditional markets. Using daily
+          Spotify chart data across 73 countries, this project measures <strong>how fast local
+          repertoire is displacing international repertoire market by market</strong>, and which
+          markets are still open to catalog from elsewhere.</p>
+        <div class="tags">
+          <span class="tag">Tableau</span><span class="tag">Excel</span>
+          <span class="tag">Market sizing</span><span class="tag">Geographic analysis</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="row">
+          <h3>The Superfan Model</h3>
+          <span class="badge plan">Planned</span>
+        </div>
+        <p class="sub">Pricing a tier the industry has been promising for three years</p>
+        <p>Roughly 2% of an artist's listeners drive 18% of their streams, yet Spotify's
+          superfan tier has stalled repeatedly on what it should contain. This project builds a
+          <strong>scenario model in Excel</strong> — conversion rate against price point against
+          incremental ARPU — to show which combinations actually clear the revenue targets the
+          majors have publicly assumed, and which do not.</p>
+        <div class="tags">
+          <span class="tag">Excel modelling</span><span class="tag">Pricing strategy</span>
+          <span class="tag">Scenario analysis</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="row">
+          <h3>AI Provenance &amp; Catalog Value</h3>
+          <span class="badge plan">Planned</span>
+        </div>
+        <p class="sub">What licensed AI music does to the value of a back catalog</p>
+        <p>With Warner settling with Suno and Universal with Udio, catalog valuation for AI
+          training is now live commercial work. This project tracks disclosed AI-content share
+          against consumption data to test a straightforward question:
+          <strong>does an AI-saturated genre lose measurable value in its human catalog?</strong></p>
+        <div class="tags">
+          <span class="tag">Tableau</span><span class="tag">Competitive analysis</span>
+          <span class="tag">Rights &amp; licensing</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="expertise">
+    <div class="shead"><span class="snum">03</span><h2>Areas of expertise</h2></div>
+    <p class="slede">Detail-oriented operations and communications professional with a
+      background in Master of Music and MBA coursework — with a proven record in managing complex
+      event operations, analysing audience and student engagement metrics, and coordinating across
+      professors, guest artists, technical crews, parents and students.</p>
+    <div class="grid3">
+      <div class="ex">
+        <h3>Business intelligence &amp; analytics</h3>
+        <ul>
+          <li>Data structuring, cleaning and validation on large, messy real-world datasets</li>
+          <li>KPI design — defining the measure that answers the actual business question</li>
+          <li>Dashboard design in Tableau for non-technical decision-makers</li>
+          <li>Advanced Excel: pivot tables, Power Query, metrics tracking, scenario models</li>
+          <li>Engagement and audience analysis, including Google Analytics</li>
+        </ul>
+      </div>
+      <div class="ex">
+        <h3>Operations &amp; program management</h3>
+        <ul>
+          <li>Complex event operations and stage logistics</li>
+          <li>Scheduling, record keeping and process documentation</li>
+          <li>Cross-functional coordination across artists, faculty, crew and families</li>
+          <li>Spreadsheet systems built for other people to actually use</li>
+          <li>Program engagement measurement and operational efficiency</li>
+        </ul>
+      </div>
+      <div class="ex">
+        <h3>Music industry &amp; communications</h3>
+        <ul>
+          <li>Classical performance training and repertoire knowledge</li>
+          <li>Streaming economics, royalty models and rights fundamentals</li>
+          <li>Social media content creation and engagement analysis</li>
+          <li>Storytelling and public engagement — translating data into narrative</li>
+          <li>Bilingual communication across English and Mandarin markets</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="background">
+    <div class="shead"><span class="snum">04</span><h2>Background</h2></div>
+
+    <div class="note"><b>To complete:</b> replace the bracketed entries below with your real
+      institutions, employers and dates. See <code>CONTENT-TO-FILL.md</code> in this folder for
+      the full checklist.</div>
+
+    <h3 style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:34px 0 4px">Education</h3>
+    <div class="entry">
+      <div class="when">[YEAR – YEAR]</div>
+      <div class="what">
+        <h3>Master of Business Administration (in progress)</h3>
+        <div class="where">[UNIVERSITY NAME]</div>
+        <p>Coursework in strategy, finance, operations and data-driven decision-making.
+          [Add concentration, honours, relevant coursework or club leadership.]</p>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="when">[YEAR – YEAR]</div>
+      <div class="what">
+        <h3>Master of Music</h3>
+        <div class="where">[CONSERVATORY / UNIVERSITY NAME]</div>
+        <p>[Instrument / specialisation. Add performance highlights, competitions,
+          ensembles or teaching roles.]</p>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="when">[YEAR – YEAR]</div>
+      <div class="what">
+        <h3>Bachelor of [DEGREE]</h3>
+        <div class="where">[UNIVERSITY NAME]</div>
+        <p>[Add relevant detail.]</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:44px 0 4px">Experience</h3>
+    <div class="entry">
+      <div class="when">[MONTH YEAR – PRESENT]</div>
+      <div class="what">
+        <h3>[JOB TITLE]</h3>
+        <div class="where">[ORGANISATION]</div>
+        <ul>
+          <li>[Achievement with a number — what you changed, and by how much.]</li>
+          <li>[Coordination or operations responsibility, with scale: how many people, events, students.]</li>
+          <li>[Analysis or reporting you owned, and the decision it informed.]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="when">[MONTH YEAR – MONTH YEAR]</div>
+      <div class="what">
+        <h3>[JOB TITLE]</h3>
+        <div class="where">[ORGANISATION]</div>
+        <ul>
+          <li>[Achievement with a number.]</li>
+          <li>[Achievement with a number.]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="shead"><span class="snum">05</span><h2>Skills &amp; tools</h2></div>
+    <div class="skills">
+      <div class="skill">
+        <h3>Data &amp; technical</h3>
+        <ul>
+          <li><b>Microsoft Excel</b><span class="lvl">Advanced</span></li>
+          <li><b>Tableau</b><span class="lvl">Proficient</span></li>
+          <li><b>Google Analytics</b><span class="lvl">Proficient</span></li>
+          <li><b>Python</b><span class="lvl">Working</span></li>
+          <li><b>Data cleaning &amp; validation</b><span class="lvl">Advanced</span></li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Business</h3>
+        <ul>
+          <li><b>KPI &amp; metric design</b></li>
+          <li><b>Market &amp; competitive analysis</b></li>
+          <li><b>Operations management</b></li>
+          <li><b>Scenario &amp; pricing modelling</b></li>
+          <li><b>Executive reporting</b></li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Communication</h3>
+        <ul>
+          <li><b>English</b><span class="lvl">Fluent</span></li>
+          <li><b>Mandarin</b><span class="lvl">Fluent</span></li>
+          <li><b>Data storytelling</b></li>
+          <li><b>Social content &amp; engagement</b></li>
+          <li><b>Cross-functional coordination</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Let's talk</h2>
+      <p>I'm looking for roles in business intelligence, music industry strategy, and AI music
+        strategy — anywhere the work sits between music, business and data.</p>
+      <div class="actions" style="justify-content:center;margin-bottom:0">
+        <a class="btn solid" href="mailto:YOUR_EMAIL">Email me</a>
+        <a class="btn" href="YOUR_LINKEDIN_URL">LinkedIn</a>
+        <a class="btn" href="assets/Rebecca-Wu-Resume.pdf">Download résumé</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer><div class="wrap">© 2026 Rebecca Wu · Built and hosted free on GitHub Pages</div></footer>
+
+</body>
+</html>
