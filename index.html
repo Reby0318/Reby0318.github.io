@@ -116,6 +116,16 @@ h3{font-size:17px; font-weight:640; margin:0 0 10px; letter-spacing:-.005em}
 .links{display:flex; gap:18px; flex-wrap:wrap; font-size:14.5px; font-weight:550}
 .links a{color:var(--accent); border-bottom:1px solid transparent}
 .links a:hover{border-bottom-color:currentColor}
+.repos{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:8px}
+.repo{display:block; background:var(--panel); border:1px solid var(--line); border-radius:12px;
+      padding:20px; transition:border-color .15s}
+.repo:hover{border-color:var(--accent)}
+.repo h4{font-family:var(--serif); font-size:17.5px; font-weight:600; margin:0 0 6px;
+         letter-spacing:-.01em}
+.repo p{font-size:14.5px; color:var(--ink-2); margin:0 0 12px; line-height:1.5; max-width:none}
+.repo .rtags{display:flex; gap:6px; flex-wrap:wrap}
+.repo .rtag{font-size:11.5px; padding:3px 9px; border-radius:999px; background:var(--panel-2);
+            color:var(--ink-3); border:1px solid var(--line)}
 
 /* ---------- expertise ---------- */
 .grid3{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px}
@@ -281,6 +291,9 @@ footer{padding:40px 0 60px; font-size:13.5px; color:var(--ink-3); text-align:cen
           <span class="tag">Gradient Boosting</span><span class="tag">Predictive modelling</span>
           <span class="tag">Recommendation systems</span>
         </div>
+        <div class="links">
+          <a href="https://github.com/Reby0318/spotify-music-analytics">Code &amp; analysis →</a>
+        </div>
       </article>
 
       <article class="card">
@@ -339,6 +352,36 @@ footer{padding:40px 0 60px; font-size:13.5px; color:var(--ink-3); text-align:cen
         </div>
       </article>
 
+    </div>
+
+    <h3 style="margin-top:46px">More on GitHub</h3>
+    <p class="slede" style="margin-bottom:22px">Earlier analytics and machine-learning work —
+      each repo has its own write-up, methodology and results.</p>
+    <div class="repos">
+      <a class="repo" href="https://github.com/Reby0318/spotify-genre-classification">
+        <h4>Spotify Genre Classification</h4>
+        <p>Multi-class classification of 114,000 tracks across 114 genres using audio features,
+          with PCA and statistical testing.</p>
+        <div class="rtags"><span class="rtag">Random Forest</span><span class="rtag">Gradient Boosting</span><span class="rtag">PCA</span></div>
+      </a>
+      <a class="repo" href="https://github.com/Reby0318/music-generation-lstm">
+        <h4>Classical Music Generation (LSTM)</h4>
+        <p>An LSTM neural network trained on 292 classical piano MIDI files from 19 composers
+          to generate original compositions.</p>
+        <div class="rtags"><span class="rtag">PyTorch</span><span class="rtag">Deep learning</span><span class="rtag">MIDI</span></div>
+      </a>
+      <a class="repo" href="https://github.com/Reby0318/marketing-campaign-analysis">
+        <h4>Marketing Campaign Performance</h4>
+        <p>Evaluation of 200,000 campaigns across six channels, five companies and five US
+          markets, testing what actually drives channel effectiveness.</p>
+        <div class="rtags"><span class="rtag">ANOVA</span><span class="rtag">Python</span><span class="rtag">Visual analytics</span></div>
+      </a>
+      <a class="repo" href="https://github.com/Reby0318/job-salary-prediction">
+        <h4>Salary Prediction &amp; Workforce Analytics</h4>
+        <p>Analysis of 250,000 job records to identify compensation drivers and build
+          predictive salary models.</p>
+        <div class="rtags"><span class="rtag">ANOVA</span><span class="rtag">Random Forest</span><span class="rtag">Predictive modelling</span></div>
+      </a>
     </div>
   </section>
 
