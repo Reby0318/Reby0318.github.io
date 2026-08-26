@@ -71,6 +71,8 @@ h1{font-family:var(--serif); font-size:clamp(42px,7vw,68px); line-height:1.04;
 .btn:hover{border-color:var(--accent); color:var(--accent)}
 .btn.solid{background:var(--ink); color:var(--bg); border-color:var(--ink)}
 .btn.solid:hover{opacity:.86; color:var(--bg)}
+.btn.pending{color:var(--ink-3); border-style:dashed; cursor:default}
+.btn.pending:hover{border-color:var(--line-2); color:var(--ink-3)}
 .pillars{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1px;
          background:var(--line); border:1px solid var(--line); border-radius:12px; overflow:hidden}
 .pillar{background:var(--panel); padding:22px 22px 24px}
@@ -181,10 +183,10 @@ footer{padding:40px 0 60px; font-size:13.5px; color:var(--ink-3); text-align:cen
       the commercial questions the music industry is currently guessing at.</p>
     <div class="actions">
       <a class="btn solid" href="#work">See my work</a>
-      <a class="btn" href="mailto:YOUR_EMAIL">Email</a>
-      <a class="btn" href="YOUR_LINKEDIN_URL">LinkedIn</a>
+      <span class="btn pending">Email — add yours</span>
+      <span class="btn pending">LinkedIn — add yours</span>
       <a class="btn" href="https://github.com/Reby0318">GitHub</a>
-      <a class="btn" href="assets/Rebecca-Wu-Resume.pdf">Résumé</a>
+      <span class="btn pending">Résumé — add PDF</span>
     </div>
     <div class="pillars">
       <div class="pillar"><div class="t">Music</div>
@@ -250,7 +252,6 @@ footer{padding:40px 0 60px; font-size:13.5px; color:var(--ink-3); text-align:cen
         <div class="links">
           <a href="https://Reby0318.github.io/music-market-intelligence/">Project site →</a>
           <a href="https://github.com/Reby0318/music-market-intelligence/blob/main/paper/Signal-vs-Noise-Paper.md">Full paper →</a>
-          <a href="PROJECT_TABLEAU_URL">Dashboards →</a>
           <a href="https://github.com/Reby0318/music-market-intelligence">Code &amp; data →</a>
         </div>
       </article>
@@ -451,9 +452,9 @@ footer{padding:40px 0 60px; font-size:13.5px; color:var(--ink-3); text-align:cen
       <p>I'm looking for roles in business intelligence, music industry strategy, and AI music
         strategy — anywhere the work sits between music, business and data.</p>
       <div class="actions" style="justify-content:center;margin-bottom:0">
-        <a class="btn solid" href="mailto:YOUR_EMAIL">Email me</a>
-        <a class="btn" href="YOUR_LINKEDIN_URL">LinkedIn</a>
-        <a class="btn" href="assets/Rebecca-Wu-Resume.pdf">Download résumé</a>
+        <span class="btn pending">Email — add yours</span>
+        <span class="btn pending">LinkedIn — add yours</span>
+        <span class="btn pending">Résumé — add PDF</span>
       </div>
     </div>
   </section>
