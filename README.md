@@ -5,11 +5,14 @@ no dependencies, and **free to host permanently**.
 
 ---
 
-## Before you publish
+## Status
 
-Work through **[CONTENT-TO-FILL.md](CONTENT-TO-FILL.md)** — it lists every placeholder in
-the page, in order. Nothing about your education, employers or dates was invented, so those
-sections are stubbed and waiting for you.
+**Live at https://reby0318.github.io** — content is complete. Experience, education,
+projects, certifications and contact links are all filled in.
+
+The only thing still to add is the Tableau dashboard link, once those are built
+(search for `PROJECT_TABLEAU_URL` — currently rendered as a non-clickable label so it
+cannot 404).
 
 ---
 
