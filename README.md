@@ -6,8 +6,9 @@ Ting-Yun (Rebecca) Wu — classically trained musician, Master of Music, MBA can
 Information Technology and Business Analytics.
 Working at the intersection of music, business and data.
 
-Single self-contained HTML page. No framework, no build step, no dependencies,
-no external requests. Hosted on GitHub Pages.
+Single HTML page. No framework, no build step, no dependencies. Light/dark theme with a
+manual toggle, scroll-reveal animation that respects reduced-motion settings, and
+typography from Google Fonts (Fraunces + Inter). Hosted on GitHub Pages.
 
 ## Contact
 
