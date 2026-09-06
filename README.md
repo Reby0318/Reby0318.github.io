@@ -2,7 +2,8 @@
 
 Personal portfolio site: **[reby0318.github.io](https://reby0318.github.io)**
 
-Ting-Yun (Rebecca) Wu — classically trained pianist, Master of Music, MBA candidate.
+Ting-Yun (Rebecca) Wu — classically trained musician, Master of Music, MBA candidate in
+Information Technology and Business Analytics.
 Working at the intersection of music, business and data.
 
 Single self-contained HTML page. No framework, no build step, no dependencies,
