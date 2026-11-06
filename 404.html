@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found</title>
+<script>
+// The map makers moved to roamfolio.github.io. Old links (including shared flight logs, whose data
+// rides in ?a= or #a=) are sent to the same page at the new address.
+(function () {
+  var moved = { "/flight-log-2026": "/flight-log-2026", "/us-travel-story": "/us-travel-story", "/world-food-map-site": "/world-food-map-site", "/roamfolio": "" };
+  var p = location.pathname;
+  for (var from in moved) {
+    if (p === from || p.indexOf(from + "/") === 0) {
+      location.replace("https://roamfolio.github.io" + moved[from] + (p.slice(from.length) || "/") + location.search + location.hash);
+      return;
+    }
+  }
+})();
+</script>
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; font: 16px/1.5 system-ui, -apple-system, sans-serif; background: #f6f6f4; color: #1d1d1f; }
+  @media (prefers-color-scheme: dark) { body { background: #121418; color: #eef0f3; } a { color: #9cc3ff; } }
+  main { padding: 24px; text-align: center; max-width: 34rem; }
+  h1 { font-size: 22px; margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Page not found</h1>
+  <p>Looking for the map makers? They're now at <a href="https://roamfolio.github.io/">roamfolio.github.io</a>.</p>
+  <p><a href="/">Go to the home page</a></p>
+</main>
+</body>
+</html>
